@@ -314,11 +314,6 @@ a:focus {
 }
 
 /*
-    This step has some animated text ...
-*/
-#ing { width: 500px }
-
-/*
     ... so we define display to `inline-block` to enable transforms and
     transition duration to 0.5s ...
 */
@@ -381,12 +376,9 @@ a:focus {
     The 'imagination' step is again some boring font-sizing.
 */
 
-#imagination {
-    width: 600px;
-}
 
 #imagination .imagination {
-    font-size: 78px;
+    font-size: 24px;
 }
 
 /*

@@ -17,6 +17,17 @@ angular.module("main", ['zingchart-angularjs'])
       ]
   };
 
+  $scope.workload_graph = {
+    "type":"pie3d",
+      "series": [
+          {"text":"Server Closet", "values":[2]},
+          {"text":"values":[55]},
+          {"text":"values":[30]},
+          {"text":"values":[28]},
+          {"text":"values":[15]}
+      ]
+  }
+
   // Static data...
   $scope.applications = ['Email', 'Productivity', 'CRM'];
 
@@ -113,5 +124,124 @@ angular.module("main", ['zingchart-angularjs'])
           medium_usage: .75,
           large_usage: 1
       }
+  ];
+
+  $scope.distribution_by_location = [
+    {
+      location: "Server Closet",
+      small_usage: .35,
+      medium_usage: .04,
+      large_usage: .02,
+      pue: 2.5
+    },
+    {
+      location: "Server Room",
+      small_usage: .45,
+      medium_usage: .09,
+      large_usage: .04,
+      pue: 2.1
+    },
+    {
+      location: "Localized DC",
+      small_usage: .10,
+      medium_usage: .38,
+      large_usage: .08,
+      pue: 2.0
+    },
+    {
+      location: "Mid-Tier DC",
+      small_usage: .0,
+      medium_usage: .21,
+      large_usage: .23,
+      pue: 2.0
+    },
+    {
+      location: "Enterprise-Class DC",
+      small_usage: .10,
+      medium_usage: .27,
+      large_usage: .63,
+      pue: 1.5
+    }
+  ];
+
+  $scope.users_per_server = [
+    {
+      location: "Server Closet",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 6
+      },{
+        name: 'Productivity',
+        users_per_server: 7
+      },{
+        name: 'CRM',
+        users_per_server: 9
+      }]
+    },
+    {
+      location: "Server Room",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 5
+      },{
+        name: 'Productivity',
+        users_per_server:6
+      },{
+        name: 'CRM',
+        users_per_server: 9
+      }]
+    },
+    {
+      location: "Localized DC",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 17
+      },{
+        name: 'Productivity',
+        users_per_server: 29
+      },{
+        name: 'CRM',
+        users_per_server: 50
+      }]
+    },
+    {
+      location: "Mid-Tier DC",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 462
+      },{
+        name: 'Productivity',
+        users_per_server: 450
+      },{
+        name: 'CRM',
+        users_per_server: 598
+      }]
+    },
+    {
+      location: "Enterprise-Class DC",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 909
+      },{
+        name: 'Productivity',
+        users_per_server: 909
+      },{
+        name: 'CRM',
+        users_per_server: 909
+      }]
+    },
+    {
+      location: "Cloud",
+      applications:[ {
+        name: 'Email',
+        users_per_server: 909
+      },{
+        name: 'Productivity',
+        users_per_server: 909
+      },{
+        name: 'CRM',
+        users_per_server: 909
+      }]
+    }
   ];
 });
